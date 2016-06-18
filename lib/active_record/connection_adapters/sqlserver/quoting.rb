@@ -54,7 +54,7 @@ module ActiveRecord
           case value
           when Type::Binary::Data
             "0x#{value.hex}"
-          when ActiveRecord::Type::SQLServer::Char::Data
+          when ActiveRecord::SQLServer::Type::Char::Data
             value.quoted
           when String, ActiveSupport::Multibyte::Chars
             "#{QUOTED_STRING_PREFIX}#{super}"
